@@ -1,6 +1,6 @@
 # onion-regex [![Build Status](https://travis-ci.org/k4m4/onion-regex.svg?branch=master)](https://travis-ci.org/k4m4/onion-regex)
 
-> Regular expression for matching .onion Tor links.
+> Regular expression for matching .onion Tor links (v2 & v3).
 
 
 ## Install
@@ -21,7 +21,10 @@ onionRegex().test('nodejsrocks xmh57jrzrnw6insl.onion');
 onionRegex({exact: true}).test('nodejsrocks xmh57jrzrnw6insl.onion foo');
 //=> false
 
-onionRegex({exact: true}).test('xmh57jrzrnw6insl.onion');
+onionRegex.v2({exact: true}).test('xmh57jrzrnw6insl.onion');
+//=> true
+
+onionRegex.v3({exact: true}).test('vww6ybal4bd7szmgncyruucpgfkqahzddi37ktceo3ah7ngmcopnpyyd.onion');
 //=> true
 
 'nodejsrocks 3g2upl4pq6kufc4m.onion rainbow facebookcorewwwi.onion'.match(onionRegex());
@@ -34,6 +37,14 @@ onionRegex({exact: true}).test('xmh57jrzrnw6insl.onion');
 ### onionRegex([options])
 
 Returns a regex for matching onion links.
+
+### onionRegex.v2([options])
+
+Returns a regex for matching version 2 (v2) onion links.
+
+### onionRegex.v3([options])
+
+Returns a regex for matching version 3 (v3) onion links.
 
 #### options.exact
 

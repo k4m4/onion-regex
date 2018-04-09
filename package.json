@@ -1,12 +1,12 @@
 {
   "name": "onion-regex",
-  "version": "1.0.0",
-  "description": "Regular expression for matching .onion Tor links.",
+  "version": "2.0.0",
+  "description": "Regular expression for matching .onion Tor links (v2 & v3).",
   "license": "MIT",
   "repository": "k4m4/onion-regex",
   "author": {
     "name": "Nikolaos Kamarinakis",
-    "url": "nikolaskama.me",
+    "url": "https://nikolaskama.me",
     "email": "nikolaskam@gmail.com"
   },
   "engines": {
@@ -20,6 +20,8 @@
     "onion",
     "deep-web",
     "links",
+    "v2",
+    "v3",
     "regex"
   ],
   "files": [
