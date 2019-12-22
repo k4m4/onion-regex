@@ -1,5 +1,5 @@
 import test from 'ava';
-import m from './';
+import m from '.';
 
 const v2 = [
 	'xmh57jrzrnw6insl.onion',
@@ -16,17 +16,18 @@ const v3 = [
 ];
 
 const onionsNot = [
-		'nikolaskama.me',
-		'0x281055afc982d96fab65b3a49cac8b878184cb16',
-		'nikolaskam@gmail.com foo',
-		'absdefghijklmn[IPv6:2001:db8::2]',
-		'https://abc.xyz',
+	'nikolaskama.me',
+	'0x281055afc982d96fab65b3a49cac8b878184cb16',
+	'nikolaskam@gmail.com foo',
+	'absdefghijklmn[IPv6:2001:db8::2]',
+	'https://abc.xyz'
 ];
 
 test('Exact onion links', t => {
 	for (const x of v2) {
 		t.true(m({exact: true}).test(x));
 	}
+
 	for (const x of v3) {
 		t.true(m({exact: true}).test(x));
 	}
@@ -36,6 +37,7 @@ test('Non-exact onion links', t => {
 	for (const x of v2) {
 		t.is((m().exec(`foo ${x} bar`) || [])[0], x);
 	}
+
 	for (const x of v3) {
 		t.is((m().exec(`foo ${x} bar`) || [])[0], x);
 	}
@@ -49,12 +51,12 @@ test('Non-onion links', t => {
 
 test('v2 onion links', t => {
 	for (const x of v2) {
-		t.true(m.v2({exact: true}).test(x))
+		t.true(m.v2({exact: true}).test(x));
 	}
 });
 
 test('v3 onion links', t => {
 	for (const x of v3) {
-		t.true(m.v3({exact: true}).test(x))
+		t.true(m.v3({exact: true}).test(x));
 	}
 });
