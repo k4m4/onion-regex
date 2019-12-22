@@ -1,4 +1,4 @@
-# onion-regex [![Build Status](https://travis-ci.org/k4m4/onion-regex.svg?branch=master)](https://travis-ci.org/k4m4/onion-regex)
+# onion-regex [![Build Status](https://travis-ci.org/k4m4/onion-regex.svg?branch=master)](https://travis-ci.org/k4m4/onion-regex) [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/xojs/xo)
 
 > Regular expression for matching .onion Tor links (v2 & v3).
 
