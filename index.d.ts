@@ -10,17 +10,6 @@ declare namespace onionRegex {
 
 declare const onionRegex: {
 	/**
-	Returns a regex for matching onion links.
-	@example
-	```
-	import onionRegex = require('onion-regex');
-	onionRegex().test('nodejsrocks xmh57jrzrnw6insl.onion');
-	//=> true
-	```
-	*/
-	(options?: onionRegex.Options): RegExp;
-
-	/**
 	Returns a regex for matching version 2 (v2) onion links.
 	@example
 	```
@@ -29,7 +18,7 @@ declare const onionRegex: {
 	//=> true
 	```
 	*/
-	v2(options?: onionRegex.Options): RegExp;
+	v2: (options?: onionRegex.Options) => RegExp;
 
 	/**
 	Returns a regex for matching version 3 (v3) onion links.
@@ -39,7 +28,18 @@ declare const onionRegex: {
 	//=> true
 	```
 	*/
-	v3(options?: onionRegex.Options): RegExp;
-}
+	v3: (options?: onionRegex.Options) => RegExp;
+
+	/**
+	Returns a regex for matching onion links.
+	@example
+	```
+	import onionRegex = require('onion-regex');
+	onionRegex().test('nodejsrocks xmh57jrzrnw6insl.onion');
+	//=> true
+	```
+	*/
+	(options?: onionRegex.Options): RegExp;
+};
 
 export = onionRegex;
